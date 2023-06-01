@@ -15,3 +15,5 @@ The is a script that does a very minor conversion of the [alienrpg](https://gith
 1. Make sure that you have Powershell 7 installed, which is NOT the one built into Windows as of this writing. The script uses some json parsing capabilities that are not available in Powershell 5 and earlier.
 1. Execute the script from powershell command prompt.
 1. Enjoy!
+
+Note that because this runs against a new copy of the system, if you update alienrpg in the future, you may want to re-run this script to re-create the conversion system with any improvements in the original.
