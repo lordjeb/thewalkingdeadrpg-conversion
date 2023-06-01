@@ -3,7 +3,7 @@ Param (
 )
 
 $srcPath = "$FoundryDataPath\systems\alienrpg"
-$destPath = "$FoundryDataPath\systems\thewalkingdeadrpg"
+$destPath = "$FoundryDataPath\systems\thewalkingdeadrpg-fromalien"
 
 if (!(Test-Path $srcPath)) {
     throw "The FoundryVTT alienrpg system must be installed at $srcPath"
@@ -21,8 +21,8 @@ if (!(Test-Path $srcPath)) {
 
 $filename = "$destPath\system.json"
 $j = Get-Content $filename -Raw | ConvertFrom-Json
-$j.id = 'thewalkingdeadrpg'
-$j.title = 'The Walking Dead RPG (Unofficial)'
+$j.id = 'thewalkingdeadrpg-fromalien'
+$j.title = 'The Walking Dead RPG (Alien conversion)'
 $j.authors += [PSCustomObject]@{ name = 'Jeremy Hurren (conversion script from alienrpg)' }
 $j | ConvertTo-Json -Depth 32 | Set-Content $filename
 
